@@ -1,0 +1,1536 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/19/2020 9:56:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="FALANA"
+  DTS:CreatorName="FALANA\Falana"
+  DTS:DTSID="{DE8CA591-614E-4774-BC93-D28F5E1903FB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{A9854F87-D416-411C-94E8-E1493BEDA891}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import danych Zamówienia z arkusza Excel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Import danych Zamówienia z arkusza Excel"
+      DTS:DTSID="{DB321E72-8ED5-4C74-8AB0-27A9B06B0668}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import danych Zamówienia z arkusza Excel"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Konwersja tekstu Unicode"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[orderPriority]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="orderPriority"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[shipMode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="shipMode"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipMode]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[customerName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="customerName"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerName]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[province]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="province"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[province]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="region"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[customerSegment]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="customerSegment"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerSegment]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[productCategory]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productCategory"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productCategory]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[productSubCategory]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productSubCategory"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productSubCategory]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[productName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productName"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productName]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input].Columns[productContainer]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productContainer"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productContainer]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[orderPriorityConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[orderPriorityConverted]"
+                      name="orderPriorityConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[shipModeConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[shipModeConverted]"
+                      name="shipModeConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipMode]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerNameConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerNameConverted]"
+                      name="customerNameConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[provinceConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[provinceConverted]"
+                      name="provinceConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[province]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[regionConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[regionConverted]"
+                      name="regionConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerSegmentConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerSegmentConverted]"
+                      name="customerSegmentConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerSegment]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productCategoryConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productCategoryConverted]"
+                      name="productCategoryConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productCategory]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productSubCategoryConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productSubCategoryConverted]"
+                      name="productSubCategoryConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productSubCategory]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productNameConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productNameConverted]"
+                      name="productNameConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productContainerConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productContainerConverted]"
+                      name="productContainerConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productContainer]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Rozdzielanie priorytetów"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input].Columns[orderPriority]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="orderPriority"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Normalny i wysoki priorytet]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Normalny i wysoki priorytet"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[LOWER](#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]}) != "low"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">LOWER(orderPriority) != "low"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Niski priorytet]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Niski priorytet"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[LOWER](#{Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]}) == "low"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">LOWER(orderPriority) == "low"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Tabela Zamówienia Arkusz"
+              name="Tabela Zamówienia Arkusz"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Sample-Superstore-Sales-Excel-1$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Connections[OleDbConnection]"
+                  connectionManagerID="{4A785FCF-4620-4B44-9184-7C5066BAA3B6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[rowId]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Row ID]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[rowId]"
+                      name="rowId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderId]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order ID]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderId]"
+                      name="orderId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Date]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderDate]"
+                      name="orderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Priority]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderPriority]"
+                      name="orderPriority"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderQuantity]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Quantity]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderQuantity]"
+                      name="orderQuantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[sales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Sales]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[sales]"
+                      name="sales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[discount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Discount]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[discount]"
+                      name="discount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipMode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Ship Mode]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipMode]"
+                      name="shipMode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[profit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Profit]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[profit]"
+                      name="profit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[unitPrice]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Unit Price]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[unitPrice]"
+                      name="unitPrice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shippingCost]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Shipping Cost]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shippingCost]"
+                      name="shippingCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Customer Name]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerName]"
+                      name="customerName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[province]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Province]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[province]"
+                      name="province"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Region]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerSegment]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Customer Segment]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[customerSegment]"
+                      name="customerSegment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productCategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Category]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productCategory]"
+                      name="productCategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productSubCategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Sub-Category]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productSubCategory]"
+                      name="productSubCategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Name]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productName]"
+                      name="productName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productContainer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Container]"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productContainer]"
+                      name="productContainer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productBaseMargin]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Base Margin]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productBaseMargin]"
+                      name="productBaseMargin"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Ship Date]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipDate]"
+                      name="shipDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Row ID]"
+                      dataType="r8"
+                      name="Row ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order ID]"
+                      dataType="r8"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Date]"
+                      dataType="date"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Priority]"
+                      dataType="wstr"
+                      length="255"
+                      name="Order Priority" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Order Quantity]"
+                      dataType="r8"
+                      name="Order Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Sales]"
+                      dataType="r8"
+                      name="Sales" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Discount]"
+                      dataType="r8"
+                      name="Discount" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Ship Mode]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ship Mode" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Profit]"
+                      dataType="r8"
+                      name="Profit" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Unit Price]"
+                      dataType="r8"
+                      name="Unit Price" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Shipping Cost]"
+                      dataType="r8"
+                      name="Shipping Cost" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Customer Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Province]"
+                      dataType="wstr"
+                      length="255"
+                      name="Province" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Customer Segment]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Sub-Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product Sub-Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Container]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product Container" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Product Base Margin]"
+                      dataType="r8"
+                      name="Product Base Margin" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].ExternalColumns[Ship Date]"
+                      dataType="date"
+                      name="Ship Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Row ID]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Row ID]"
+                      name="Row ID" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order ID]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order ID]"
+                      name="Order ID" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Date]"
+                      dataType="date"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Date]"
+                      name="Order Date" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Priority]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Priority]"
+                      name="Order Priority" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Quantity]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Order Quantity]"
+                      name="Order Quantity" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Sales]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Sales]"
+                      name="Sales" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Discount]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Discount]"
+                      name="Discount" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Ship Mode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Ship Mode]"
+                      name="Ship Mode" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Profit]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Profit]"
+                      name="Profit" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Unit Price]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Unit Price]"
+                      name="Unit Price" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Shipping Cost]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Shipping Cost]"
+                      name="Shipping Cost" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Customer Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Customer Name]"
+                      name="Customer Name" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Province]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Province]"
+                      name="Province" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Customer Segment]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Customer Segment]"
+                      name="Customer Segment" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Category]"
+                      name="Product Category" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Sub-Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Sub-Category]"
+                      name="Product Sub-Category" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Name]"
+                      name="Product Name" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Container]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Container]"
+                      name="Product Container" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Base Margin]"
+                      dataType="r8"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Product Base Margin]"
+                      name="Product Base Margin" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Ship Date]"
+                      dataType="date"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[Ship Date]"
+                      name="Ship Date" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Tabela Zamówienia w bazie BAZA"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[zamowienia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Connections[OleDbConnection]"
+                  connectionManagerID="{B78C150E-1330-4C42-A26F-D425C2D86E9F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[FALANA.BAZAdf]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[rowId]"
+                      cachedDataType="r8"
+                      cachedName="rowId"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[rowId]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[rowId]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[orderId]"
+                      cachedDataType="r8"
+                      cachedName="orderId"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderId]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderId]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[orderDate]"
+                      cachedDataType="date"
+                      cachedName="orderDate"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderDate]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderDate]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[orderQuantity]"
+                      cachedDataType="r8"
+                      cachedName="orderQuantity"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderQuantity]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[orderQuantity]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[sales]"
+                      cachedDataType="r8"
+                      cachedName="sales"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[sales]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[sales]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[discount]"
+                      cachedDataType="r8"
+                      cachedName="discount"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[discount]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[discount]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[profit]"
+                      cachedDataType="r8"
+                      cachedName="profit"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[profit]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[profit]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[unitPrice]"
+                      cachedDataType="r8"
+                      cachedName="unitPrice"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[unitPrice]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[unitPrice]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[shippingCost]"
+                      cachedDataType="r8"
+                      cachedName="shippingCost"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shippingCost]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shippingCost]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[productBaseMargin]"
+                      cachedDataType="r8"
+                      cachedName="productBaseMargin"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productBaseMargin]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[productBaseMargin]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[shipDate]"
+                      cachedDataType="date"
+                      cachedName="shipDate"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shipDate]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output].Columns[shipDate]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[orderPriorityConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="orderPriorityConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderPriority]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[orderPriorityConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[shipModeConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="shipModeConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shipMode]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[shipModeConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[customerNameConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="customerNameConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerNameConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[provinceConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="provinceConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[province]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[provinceConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[productCategoryConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="productCategoryConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productCategory]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productCategoryConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[productNameConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="productNameConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productName]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productNameConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[productContainerConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="productContainerConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productContainer]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productContainerConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[customerSegmentConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="customerSegmentConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[customerSegment]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[customerSegmentConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[regionConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="regionConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[regionConverted]" />
+                    <inputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].Columns[productSubCategoryConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="productSubCategoryConverted"
+                      externalMetadataColumnId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productSubCategory]"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output].Columns[productSubCategoryConverted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[rowId]"
+                      dataType="r8"
+                      name="rowId" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderId]"
+                      dataType="r8"
+                      name="orderId" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderDate]"
+                      dataType="dbTimeStamp"
+                      name="orderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderPriority]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="orderPriority" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[orderQuantity]"
+                      dataType="r8"
+                      name="orderQuantity" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[sales]"
+                      dataType="r8"
+                      name="sales" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[discount]"
+                      dataType="r8"
+                      name="discount" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shipMode]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="shipMode" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[profit]"
+                      dataType="r8"
+                      name="profit" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[unitPrice]"
+                      dataType="r8"
+                      name="unitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shippingCost]"
+                      dataType="r8"
+                      name="shippingCost" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="customerName" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[province]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="province" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[customerSegment]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="customerSegment" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productCategory]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="productCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productSubCategory]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="productSubCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="productName" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productContainer]"
+                      codePage="1250"
+                      dataType="str"
+                      length="80"
+                      name="productContainer" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[productBaseMargin]"
+                      dataType="r8"
+                      name="productBaseMargin" />
+                    <externalMetadataColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input].ExternalColumns[shipDate]"
+                      dataType="dbTimeStamp"
+                      name="shipDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import danych Zamówienia z arkusza Excel.Paths[Data Conversion Output]"
+              endId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Import danych Zamówienia z arkusza Excel.Paths[Excel Source Output]"
+              endId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Inputs[Conditional Split Input]"
+              name="Excel Source Output"
+              startId="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Import danych Zamówienia z arkusza Excel.Paths[Normalny i wysoki priorytet]"
+              endId="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode.Inputs[Data Conversion Input]"
+              name="Normalny i wysoki priorytet"
+              startId="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów.Outputs[Normalny i wysoki priorytet]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Stworzenie tabeli Zamówienia w bazie BAZAdf"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{654D9DE7-E117-4EA1-B86D-1C91BFD569B5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stworzenie tabeli Zamówienia w bazie BAZAdf"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B78C150E-1330-4C42-A26F-D425C2D86E9F}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[zamowienia](&#xA;&#x9;[rowId] [float] NULL,&#xA;&#x9;[orderId] [float] NULL,&#xA;&#x9;[orderDate] [datetime] NULL,&#xA;&#x9;[orderPriority] [varchar](80) NULL,&#xA;&#x9;[orderQuantity] [float] NULL,&#xA;&#x9;[sales] [float] NULL,&#xA;&#x9;[discount] [float] NULL,&#xA;&#x9;[shipMode] [varchar](80) NULL,&#xA;&#x9;[profit] [float] NULL,&#xA;&#x9;[unitPrice] [float] NULL,&#xA;&#x9;[shippingCost] [float] NULL,&#xA;&#x9;[customerName] [varchar](80) NULL,&#xA;&#x9;[province] [varchar](80) NULL,&#xA;&#x9;[region] [varchar](80) NULL,&#xA;&#x9;[customerSegment] [varchar](80) NULL,&#xA;&#x9;[productCategory] [varchar](80) NULL,&#xA;&#x9;[productSubCategory] [varchar](80) NULL,&#xA;&#x9;[productName] [varchar](255) NULL,&#xA;&#x9;[productContainer] [varchar](80) NULL,&#xA;&#x9;[productBaseMargin] [float] NULL,&#xA;&#x9;[shipDate] [datetime] NULL&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B6D477B0-3716-4610-AFDC-7C1B4FD77BEF}"
+      DTS:From="Package\Stworzenie tabeli Zamówienia w bazie BAZAdf"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import danych Zamówienia z arkusza Excel" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="278.4,41.6"
+          Id="Package\Import danych Zamówienia z arkusza Excel"
+          TopLeft="278.666655593448,232.266668512556" />
+        <NodeLayout
+          Size="292.8,41.6"
+          Id="Package\Stworzenie tabeli Zamówienia w bazie BAZAdf"
+          TopLeft="269.999989271165,144.213334479438" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="417.133322432306,185.813334479438">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.4533340331176"
+              Start="0,0"
+              End="0,38.9533340331176">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.9533340331176" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import danych Zamówienia z arkusza Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Import danych Zamówienia z arkusza Excel\Rozdzielanie priorytetów"
+          TopLeft="434.799999920527,227.786666677687" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Import danych Zamówienia z arkusza Excel\Konwersja tekstu Unicode"
+          TopLeft="428.666666640176,331.253333289252" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz"
+          TopLeft="416,105.6" />
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA"
+          TopLeft="403.600000079473,437.440000049591" />
+        <EdgeLayout
+          Id="Package\Import danych Zamówienia z arkusza Excel.Paths[Normalny i wysoki priorytet]"
+          TopLeft="529.333333280351,269.386666677687">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.8666666115656"
+              Start="0,0"
+              End="0,54.3666666115656">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.3666666115656" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-61.03138671875,21.3786458057828,122.0627734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import danych Zamówienia z arkusza Excel.Paths[Excel Source Output]"
+          TopLeft="526.999999960263,147.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.5866666776869"
+              Start="0,0"
+              End="0,73.0866666776869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.0866666776869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import danych Zamówienia z arkusza Excel.Paths[Data Conversion Output]"
+          TopLeft="524.933333359824,372.853333289252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.5866667603391"
+              Start="0,0"
+              End="0,57.0866667603391">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.0866667603391" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia Arkusz">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import danych Zamówienia z arkusza Excel\Tabela Zamówienia w bazie BAZA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
